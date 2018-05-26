@@ -14,7 +14,7 @@ submission_ids = r.json() #获取一个包含hacker_news网ID的列表
 submission_dicts = []  #创建一个存储热门文章信息的列表
 
 #查询每个ID的具体信息
-for submission_id in submission_ids:
+for submission_id in submission_ids[:30]:
     #获取每个ID的具体具体信息
     url = ('https://hacker-news.firebaseio.com/v0/item/'+
     str(submission_id)+'.json')  #根据id生成相应的api接口

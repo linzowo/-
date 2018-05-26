@@ -10,7 +10,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 #执行api调用病存储调用信息
-url = 'https://api.github.com/search/repositories?q=language:python&sort=stars'
+url = 'https://api.github.com/search/repositories?q=language:C&sort=stars'
 
 r = requests.get(url)
 print 'status code:',r.status_code
@@ -53,4 +53,4 @@ chart.title = "Mosr-Starred python projects on GitHub"
 chart.x_labels = names
 
 chart.add("",plot_dicts)
-chart.render_to_file('python_repos.svg')
+chart.render_to_file('C_repos.svg')
